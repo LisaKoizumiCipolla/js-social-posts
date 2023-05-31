@@ -99,17 +99,14 @@ posts.forEach((elements) => {
 
 
 
-const likeButton = document.getElementsByClassName('a.like-button');
-let liked = false;
+const likeButton = document.querySelectorAll('a.like-button');
 const likedPost =[];
 
 for (i = 0; i < likeButton.length ; i++){
     likeButton[i].addEventListener("click", function(){
-        if(!liked){
             likeButton.classList.add('like-button--liked');
             likedPost.push(posts.id);
             console.log(likedPost);
             //posts.likes++;
-        }
     }, {once: true});
 }
