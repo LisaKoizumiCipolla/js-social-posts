@@ -94,19 +94,20 @@ posts.forEach((elements) => {
         </div>
     </div>`;
 
-
-
-    const likeButton = document.querySelector('a.like-button');
-    let liked = false;
-    const likedPost =[];
-
-    likeButton.addEventListener("click", function(){
-        if(!liked){
-            likeButton.classList.add('like-button--liked');
-            likedPost.push(posts.id);
-            console.log(likedPost);
-            //parseInt(posts.likes)++;
-        }
-    }, {once: true});
-
 });
+
+
+
+
+const likeButton = document.querySelector('a.like-button');
+let liked = false;
+const likedPost =[];
+
+likeButton.addEventListener("click", function(){
+    if(!liked){
+        likeButton.classList.add('like-button--liked');
+        likedPost.push(posts.id);
+        console.log(likedPost);
+        //posts.likes++;
+    }
+}, {once: true});
